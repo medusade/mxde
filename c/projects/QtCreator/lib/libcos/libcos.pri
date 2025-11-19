@@ -16,14 +16,14 @@
 #   File: libcos.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c static library libcos
 ########################################################################
 
 ########################################################################
 # libcos
-XOS_LIB_COS_VERSION_BUILD_DATE = 10/17/2025 #$$system(~/bin/utility/tdate)
+XOS_LIB_COS_VERSION_BUILD_DATE = 11/17/2025 #$$system(~/bin/utility/tdate)
 
 # libcos TARGET
 #
@@ -35,9 +35,6 @@ libcos_CONFIG += staticlib
 #
 libcos_INCLUDEPATH += \
 $${c_INCLUDEPATH} \
-$${SRC}/clib/cos/cplatform \
-$${SRC}/clib/cos \
-$${SRC}/clib/cbase \
 
 # libcos DEFINES
 #
@@ -147,3 +144,4 @@ $${SRC}/clib/cos/cserialcomm.cxx \
 $${SRC}/clib/cos/cserialcomminterface.cxx \
 
 ########################################################################
+

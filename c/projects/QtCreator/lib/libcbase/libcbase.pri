@@ -16,14 +16,14 @@
 #   File: libcbase.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c static library libcbase
 ########################################################################
 
 ########################################################################
 # libcbase
-XOS_LIB_CBASE_VERSION_BUILD_DATE = 10/17/2025 #$$system(~/bin/utility/tdate)
+XOS_LIB_CBASE_VERSION_BUILD_DATE = 11/17/2025 #$$system(~/bin/utility/tdate)
 
 # libcbase TARGET
 #
@@ -35,9 +35,6 @@ libcbase_CONFIG += staticlib
 #
 libcbase_INCLUDEPATH += \
 $${c_INCLUDEPATH} \
-$${SRC}/clib/cos/cplatform \
-$${SRC}/clib/cos \
-$${SRC}/clib/cbase \
 
 # libcbase DEFINES
 #

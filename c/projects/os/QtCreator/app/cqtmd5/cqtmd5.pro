@@ -13,59 +13,70 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libcx11.pro
+#   File: cqtmd5.pro
 #
 # Author: $author$
 #   Date: 11/17/2025
 #
-# os specific QtCreator project .pro file for framework c static library libcx11
+# os specific QtCreator project .pro file for framework c executable cqtmd5
 ########################################################################
 #
-# Debug: c/build/os/QtCreator/Debug/lib/libcx11
-# Release: c/build/os/QtCreator/Release/lib/libcx11
-# Profile: c/build/os/QtCreator/Profile/lib/libcx11
+# Debug: c/build/os/QtCreator/Debug/bin/cqtmd5
+# Release: c/build/os/QtCreator/Release/bin/cqtmd5
+# Profile: c/build/os/QtCreator/Profile/bin/cqtmd5
 #
 include(../../../../../build/QtCreator/c.pri)
 include(../../../../QtCreator/c.pri)
 include(../../c.pri)
-include(../../../../QtCreator/lib/libcx11/libcx11.pri)
+include(../../../../QtCreator/app/cqtmd5/cqtmd5.pri)
 
-TARGET = $${libcx11_TARGET}
-TEMPLATE = $${libcx11_TEMPLATE}
-CONFIG += $${libcx11_CONFIG}
+TARGET = $${cqtmd5_TARGET}
 
 ########################################################################
 # INCLUDEPATH
 #
 INCLUDEPATH += \
-$${libcx11_INCLUDEPATH} \
+$${cqtmd5_INCLUDEPATH} \
 
 # DEFINES
 # 
 DEFINES += \
-$${libcx11_DEFINES} \
+$${cqtmd5_DEFINES} \
 
 ########################################################################
 # OBJECTIVE_HEADERS
 #
 OBJECTIVE_HEADERS += \
-$${libcx11_OBJECTIVE_HEADERS} \
+$${cqtmd5_OBJECTIVE_HEADERS} \
 
 # OBJECTIVE_SOURCES
 #
 OBJECTIVE_SOURCES += \
-$${libcx11_OBJECTIVE_SOURCES} \
+$${cqtmd5_OBJECTIVE_SOURCES} \
 
 ########################################################################
 # HEADERS
 #
 HEADERS += \
-$${libcx11_HEADERS} \
-$${libcx11_OBJECTIVE_HEADERS} \
+$${cqtmd5_HEADERS} \
+$${cqtmd5_OBJECTIVE_HEADERS} \
 
 # SOURCES
 #
 SOURCES += \
-$${libcx11_SOURCES} \
+$${cqtmd5_SOURCES} \
 
 ########################################################################
+# FRAMEWORKS
+#
+FRAMEWORKS += \
+$${cqtmd5_FRAMEWORKS} \
+
+# LIBS
+#
+LIBS += \
+$${cqtmd5_LIBS} \
+$${FRAMEWORKS} \
+
+########################################################################
+

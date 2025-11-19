@@ -13,59 +13,73 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libcx11.pro
+#   File: cqtmd5.pri
 #
 # Author: $author$
 #   Date: 11/17/2025
 #
-# os specific QtCreator project .pro file for framework c static library libcx11
+# generic QtCreator project .pri file for framework c executable cqtmd5
 ########################################################################
-#
-# Debug: c/build/os/QtCreator/Debug/lib/libcx11
-# Release: c/build/os/QtCreator/Release/lib/libcx11
-# Profile: c/build/os/QtCreator/Profile/lib/libcx11
-#
-include(../../../../../build/QtCreator/c.pri)
-include(../../../../QtCreator/c.pri)
-include(../../c.pri)
-include(../../../../QtCreator/lib/libcx11/libcx11.pri)
-
-TARGET = $${libcx11_TARGET}
-TEMPLATE = $${libcx11_TEMPLATE}
-CONFIG += $${libcx11_CONFIG}
 
 ########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${libcx11_INCLUDEPATH} \
+# cqtmd5
 
-# DEFINES
-# 
-DEFINES += \
-$${libcx11_DEFINES} \
+# cqtmd5 TARGET
+#
+cqtmd5_TARGET = cqtmd5
+
+# cqtmd5 INCLUDEPATH
+#
+cqtmd5_INCLUDEPATH += \
+$${c_qt_INCLUDEPATH} \
+
+# cqtmd5 DEFINES
+#
+cqtmd5_DEFINES += \
+$${c_DEFINES} \
+DEFAULT_LOGGING_LEVELS_ERROR \
+XOS_CONSOLE_MAIN_MAIN \
 
 ########################################################################
-# OBJECTIVE_HEADERS
+# cqtmd5 OBJECTIVE_HEADERS
 #
-OBJECTIVE_HEADERS += \
-$${libcx11_OBJECTIVE_HEADERS} \
+#cqtmd5_OBJECTIVE_HEADERS += \
+#$${C_SRC}/xos/app/console/cqtmd5/main.hh \
 
-# OBJECTIVE_SOURCES
+# cqtmd5 OBJECTIVE_SOURCES
 #
-OBJECTIVE_SOURCES += \
-$${libcx11_OBJECTIVE_SOURCES} \
-
-########################################################################
-# HEADERS
-#
-HEADERS += \
-$${libcx11_HEADERS} \
-$${libcx11_OBJECTIVE_HEADERS} \
-
-# SOURCES
-#
-SOURCES += \
-$${libcx11_SOURCES} \
+#cqtmd5_OBJECTIVE_SOURCES += \
+#$${C_SRC}/xos/app/console/cqtmd5/main.mm \
 
 ########################################################################
+# cqtmd5 HEADERS
+#
+cqtmd5_HEADERS += \
+$${C_SRC}/clib/ccrypto/cmd5.hxx \
+\
+$${C_SRC}/capp/cqt/cqtmd5/cQtMD5Main.hpp \
+$${C_SRC}/capp/cqt/cqtmd5/cQtMD5MainWindow.hpp \
+
+# cqtmd5 SOURCES
+#
+cqtmd5_SOURCES += \
+$${C_SRC}/clib/ccrypto/cmd5.cxx \
+$${C_SRC}/clib/cos/main.cxx \
+\
+$${C_SRC}/capp/cqt/cqtmd5/cQtMD5Main.cpp \
+$${C_SRC}/capp/cqt/cqtmd5/cQtMD5MainWindow.cpp \
+
+########################################################################
+# cqtmd5 FRAMEWORKS
+#
+cqtmd5_FRAMEWORKS += \
+$${c_qt_FRAMEWORKS} \
+
+# cqtmd5 LIBS
+#
+cqtmd5_LIBS += \
+$${c_qt_LIBS} \
+
+########################################################################
+# NO Qt
+#QT -= gui core

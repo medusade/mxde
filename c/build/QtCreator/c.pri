@@ -13,59 +13,59 @@
 # or otherwise) arising in any way out of the use of this software,
 # even if advised of the possibility of such damage.
 #
-#   File: libcx11.pro
+#   File: c.pri
 #
 # Author: $author$
 #   Date: 11/17/2025
 #
-# os specific QtCreator project .pro file for framework c static library libcx11
+# build specific QtCreator project file for framework c
 ########################################################################
-#
-# Debug: c/build/os/QtCreator/Debug/lib/libcx11
-# Release: c/build/os/QtCreator/Release/lib/libcx11
-# Profile: c/build/os/QtCreator/Profile/lib/libcx11
-#
-include(../../../../../build/QtCreator/c.pri)
-include(../../../../QtCreator/c.pri)
-include(../../c.pri)
-include(../../../../QtCreator/lib/libcx11/libcx11.pri)
 
-TARGET = $${libcx11_TARGET}
-TEMPLATE = $${libcx11_TEMPLATE}
-CONFIG += $${libcx11_CONFIG}
+contains(BUILD_OS,Uname) {
+UNAME = $$system(uname)
 
-########################################################################
-# INCLUDEPATH
-#
-INCLUDEPATH += \
-$${libcx11_INCLUDEPATH} \
+contains(UNAME,Darwin) {
+BUILD_OS = macosx
+} else {
+contains(UNAME,Linux) {
+BUILD_OS = linux
+} else {
+contains(UNAME,Windows) {
+BUILD_OS = windows
+} else {
+BUILD_OS = os
+} # contains(UNAME,Windows)
+} # contains(UNAME,Linux)
+} # contains(UNAME,Darwin)
+} else {
+contains(BUILD_OS,C_OS) {
+} else {
+BUILD_OS = os
+} # contains(BUILD_OS,C_OS)
+} # contains(BUILD_OS,Uname)
 
-# DEFINES
-# 
-DEFINES += \
-$${libcx11_DEFINES} \
-
-########################################################################
-# OBJECTIVE_HEADERS
-#
-OBJECTIVE_HEADERS += \
-$${libcx11_OBJECTIVE_HEADERS} \
-
-# OBJECTIVE_SOURCES
-#
-OBJECTIVE_SOURCES += \
-$${libcx11_OBJECTIVE_SOURCES} \
+#BUILD_CPP_VERSION = 11
 
 ########################################################################
-# HEADERS
-#
-HEADERS += \
-$${libcx11_HEADERS} \
-$${libcx11_OBJECTIVE_HEADERS} \
+# c
 
-# SOURCES
+# build c INCLUDEPATH
 #
-SOURCES += \
-$${libcx11_SOURCES} \
+build_c_INCLUDEPATH += \
+
+
+# build c DEFINES
+#
+build_c_DEFINES += \
+
+
+# build c FRAMEWORKS
+#
+build_c_FRAMEWORKS += \
+
+
+# build c LIBS
+#
+build_c_LIBS += \
 
 ########################################################################

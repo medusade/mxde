@@ -16,7 +16,7 @@
 #   File: libcthread.pro
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # os specific QtCreator project .pro file for framework c static library libcthread
 ########################################################################

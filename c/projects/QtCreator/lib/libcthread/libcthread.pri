@@ -16,14 +16,14 @@
 #   File: libcthread.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c static library libcthread
 ########################################################################
 
 ########################################################################
 # libcthread
-XOS_LIB_CTHREAD_VERSION_BUILD_DATE = 10/17/2025 #$$system(~/bin/utility/tdate)
+XOS_LIB_CTHREAD_VERSION_BUILD_DATE = 11/17/2025 #$$system(~/bin/utility/tdate)
 
 # libcthread TARGET
 #
@@ -35,10 +35,6 @@ libcthread_CONFIG += staticlib
 #
 libcthread_INCLUDEPATH += \
 $${c_INCLUDEPATH} \
-$${SRC}/clib/cos/cplatform \
-$${SRC}/clib/cos/cthread \
-$${SRC}/clib/cos \
-$${SRC}/clib/cbase \
 
 # libcthread DEFINES
 #

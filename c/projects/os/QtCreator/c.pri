@@ -16,7 +16,7 @@
 #   File: c.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # os specific QtCreator project file for framework c
 ########################################################################
@@ -124,6 +124,17 @@ c_INCLUDEPATH += \
 #
 c_DEFINES += \
 
+# qt FRAMEWORKS
+#
+contains(UNAME,Darwin) {
+lessThan(QT_MAJOR_VERSION, 5) {
+qt_FRAMEWORKS += -framework QtGui
+} else {
+qt_FRAMEWORKS += -framework QtWidgets
+} # lessThan(QT_MAJOR_VERSION, 5)
+} else {
+} # contains(UNAME,Darwin)
+
 # c os LIBS
 #
 contains(C_OS,macosx|linux) {
@@ -157,6 +168,13 @@ c_LIBS += \
 $${c_base_LIBS} \
 $${build_c_LIBS} \
 $${c_os_LIBS} \
+
+########################################################################
+# c qt LIBS
+#
+c_qt_LIBS += \
+$${qt_FRAMEWORKS} \
+$${c_LIBS} \
 
 ########################################################################
 # c x11 LIBS

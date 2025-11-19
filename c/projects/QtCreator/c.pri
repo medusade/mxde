@@ -16,7 +16,7 @@
 #   File: c.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c
 ########################################################################
@@ -36,7 +36,7 @@ THIRDPARTY_SRC = $${OTHER_PRJ}/source/$${THIRDPARTY_NAME}
 # c
 C_NAME = c
 C_SOURCE = src
-C_CREDS = creds
+C_CREDS = crd
 
 C_PKG = ../../../../..
 C_BLD = ../..
@@ -46,8 +46,8 @@ C_BIN = $${C_BLD}/bin
 C_LIB = $${C_BLD}/lib
 C_SRC = $${C_PKG}/$${C_SOURCE}
 C_CRD_SRC = $${C_PKG}/$${C_CREDS}/$${C_SOURCE}
-LIB = $${C_LIB}
 SRC = $${C_SRC}
+LIB = $${C_LIB}
 
 # c BUILD_CONFIG
 #
@@ -65,9 +65,9 @@ c_INCLUDEPATH += \
 $${C_SRC} \
 $${C_CRD_SRC} \
 $${SRC}/clib/cimage \
-$${SRC}/clib/cos/cplatform \
-$${SRC}/clib/cos \
-$${SRC}/clib/cbase \
+$${C_SRC}/clib/cos/cplatform \
+$${C_SRC}/clib/cos \
+$${C_SRC}/clib/cbase \
 $${build_c_INCLUDEPATH} \
 
 # c DEFINES
@@ -80,6 +80,20 @@ $${build_c_DEFINES} \
 c_LIBS += \
 -L$${C_LIB}/lib$${C_NAME} \
 -l$${C_NAME} \
+
+########################################################################
+# c qt INCLUDEPATH
+#
+c_qt_INCLUDEPATH += \
+$${C_SRC}/capp/cqt/cqtmd5 \
+$${C_SRC}/clib/cqt \
+$${C_SRC}/clib/ccrypto \
+$${c_INCLUDEPATH} \
+
+# c qt LIBS
+#
+c_qt_LIBS += \
+$${c_LIBS} \
 
 ########################################################################
 # c x11 INCLUDEPATH

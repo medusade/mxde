@@ -16,14 +16,14 @@
 #   File: libcdebug.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c static library libcdebug
 ########################################################################
 
 ########################################################################
 # libcdebug
-XOS_LIB_CDEBUG_VERSION_BUILD_DATE = 10/17/2025 #$$system(~/bin/utility/tdate)
+XOS_LIB_CDEBUG_VERSION_BUILD_DATE = 11/17/2025 #$$system(~/bin/utility/tdate)
 
 # libcdebug TARGET
 #
@@ -35,9 +35,6 @@ libcdebug_CONFIG += staticlib
 #
 libcdebug_INCLUDEPATH += \
 $${c_INCLUDEPATH} \
-$$SRC/clib/cos/cplatform \
-$$SRC/clib/cos \
-$$SRC/clib/cbase \
 
 # libcdebug DEFINES
 #
@@ -61,11 +58,12 @@ XOS_LIB_CDEBUG_VERSION_BUILD_DATE=$${XOS_LIB_CDEBUG_VERSION_BUILD_DATE} \
 # libcdebug HEADERS
 #
 libcdebug_HEADERS += \
-$$SRC/clib/cbase/cdebug.hxx \
+$${SRC}/clib/cbase/cdebug.hxx \
 
 # libcdebug SOURCES
 #
 libcdebug_SOURCES += \
-$$SRC/clib/cbase/cdebug.cxx \
+$${SRC}/clib/cbase/cdebug.cxx \
 
 ########################################################################
+

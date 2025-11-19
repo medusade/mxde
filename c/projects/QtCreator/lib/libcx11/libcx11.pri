@@ -16,14 +16,14 @@
 #   File: libcx11.pri
 #
 # Author: $author$
-#   Date: 10/17/2025
+#   Date: 11/17/2025
 #
 # generic QtCreator project .pri file for framework c static library libcx11
 ########################################################################
 
 ########################################################################
 # libcx11
-XOS_LIB_CX11_VERSION_BUILD_DATE = 10/17/2025 #$$system(~/bin/utility/tdate)
+XOS_LIB_CX11_VERSION_BUILD_DATE = 11/17/2025 #$$system(~/bin/utility/tdate)
 
 # libcx11 TARGET
 #
@@ -39,7 +39,7 @@ $${c_x11_INCLUDEPATH} \
 # libcx11 DEFINES
 #
 libcx11_DEFINES += \
-$${c_x11_DEFINES} \
+$${c_DEFINES} \
 DEFAULT_LOGGING_LEVELS_ERROR \
 XOS_LIB_CX11_VERSION_BUILD_DATE=$${XOS_LIB_CX11_VERSION_BUILD_DATE} \
 
