@@ -24,7 +24,7 @@
 #endif // !defined(_CQTMD5MAINWINDOW_HPP) && !defined(CQTMD5MAINWINDOW_MEMBERS_ONLY)
 
 #if !defined(CQTMD5MAINWINDOW_MEMBERS_ONLY)
-#include <QtGui>
+#include "cQt.hpp"
 #include "cmd5.hxx"
 
 #if defined(c_NAMESPACE)

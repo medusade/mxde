@@ -16,7 +16,7 @@
 //   File: cQtGuiMain.hpp
 //
 // Author: $author$           
-//   Date: 4/6/2010
+//   Date: 4/6/2010, 11/17/2025
 ///////////////////////////////////////////////////////////////////////
 #if !defined(_CQTGUIMAIN_HPP) || defined(CQTGUIMAIN_MEMBERS_ONLY)
 #if !defined(_CQTGUIMAIN_HPP) && !defined(CQTGUIMAIN_MEMBERS_ONLY)
@@ -24,7 +24,7 @@
 #endif // !defined(_CQTGUIMAIN_HPP) && !defined(CQTGUIMAIN_MEMBERS_ONLY)
 
 #if !defined(CQTGUIMAIN_MEMBERS_ONLY)
-#include <QtGui>
+#include "cQt.hpp"
 #include "cmain.hxx"
 
 #if defined(c_NAMESPACE)
